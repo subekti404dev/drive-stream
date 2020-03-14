@@ -34,7 +34,6 @@ const getStream = async id => {
   
   let cookie;
   if (res.headers["set-cookie"]) {
-    console.log(res.headers["set-cookie"]);
     const coo = res.headers["set-cookie"].find(s => s.includes("DRIVE_STREAM"));
     cookie = coo.split(";").find(c => c.includes("DRIVE_STREAM"));
   }
